@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tejasvi7.myapplication.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:id="@+id/uname"
+        android:focusable="true"
+        android:textColorHighlight="#bbaffdd6"
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/login"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColorLink="@android:color/holo_blue_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:id="@+id/password"
+        android:textColorHighlight="#ffaf35e6"
+        android:textColorHint="#90000000"
+        android:layout_below="@+id/uname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/uname"
+        android:layout_alignEnd="@+id/uname"
+        android:textColorLink="@android:color/holo_blue_dark" />
+
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/loginButton"
+        android:onClick="login"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Page"
+        android:textSize="30sp"
+        android:id="@+id/login"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/regButton"
+        android:onClick="Register"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignStart="@+id/loginButton"
+        android:layout_marginBottom="62dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account yet?"
+        android:textSize="15sp"
+        android:id="@+id/text1"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/regButton"
+        android:layout_centerHorizontal="true" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fblogin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/loginButton"
+        android:layout_alignRight="@+id/text1"
+        android:layout_alignEnd="@+id/text1" />
+
+
+</RelativeLayout>
