@@ -64,12 +64,7 @@ public class DoneItemsAdapter extends RecyclerView.Adapter<DoneItemsAdapter.View
         holder.name.setText(dbList1.get(position).getName());
         holder.usern.setText(dbList1.get(position).getQuantity());
 
-        //decode image from base64 to bitmap
-        // byte[] decodedString = Base64.decode(dbList.get(position).getPic(), Base64.DEFAULT);
-        // Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-        // set image
-        // holder.pict.setImageBitmap(decodedByte);
+        
         if(dbList1.get(position).getPic()!=null){
             byte[] decodedString = Base64.decode(dbList1.get(position).getPic(), Base64.DEFAULT);
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
@@ -104,19 +99,7 @@ public class DoneItemsAdapter extends RecyclerView.Adapter<DoneItemsAdapter.View
         @Override
         public void onClick(View v) {
 
-            /*
-            Intent intent = new Intent(context,DetailsActivity.class);
-            Bundle extras = new Bundle();
-            extras.putInt("position",getAdapterPosition());
-            intent.putExtras(extras);
-            /*
-            int i=getAdapterPosition();
-            intent.putExtra("position", getAdapterPosition());*/
-            //context.startActivity(intent);
             Toast.makeText(DoneItemsAdapter.context, "clicked on row " + getAdapterPosition(), Toast.LENGTH_LONG).show();
-
-
-
 
         }
     }
