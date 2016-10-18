@@ -200,16 +200,7 @@ public class LoginDataBaseAdapter
     public List<Item> getUserItems(User user) {
         List<Item> items = new ArrayList<>();
         Log.d("CALLED", "GET all  items called");
-        // SELECT * FROM POSTS
-        // LEFT OUTER JOIN USERS
-        // ON POSTS.KEY_POST_USER_ID_FK = USERS.KEY_USER_ID
-       // String POSTS_SELECT_QUERY =
-              //  String.format("SELECT * FROM ITEMS WHERE USERNAME = %s",
-                   //     NewUser.getUsername());
-
-        // "getReadableDatabase()" and "getWriteableDatabase()" return the same object (except under low
-        // disk space scenarios)
-       // Cursor cursor = db.rawQuery(POSTS_SELECT_QUERY, null);
+        
         Cursor cursor = db.query("ITEMS", null, " USERNAME=?", new String[]{NewUser.getUsername()}, null, null, null);
 
         try {
