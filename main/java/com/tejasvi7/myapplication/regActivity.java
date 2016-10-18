@@ -32,35 +32,10 @@ public class regActivity extends AppCompatActivity {
 
 
     }
-/*public void maleOnClick(){
-    RadioButton female = (RadioButton) findViewById(R.id.radioButton2);
-    RadioButton male = (RadioButton) findViewById(R.id.radioButton);
-     if(male.isChecked()){
-    female.setChecked(false);}
-}
-    public void femaleOnClick(){
-        RadioButton female = (RadioButton) findViewById(R.id.radioButton2);
-        RadioButton male = (RadioButton) findViewById(R.id.radioButton);
-        if(female.isChecked()){
-            male.setChecked(false);}
-    }*/
+
     public void submit(View view) {
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.myRadioGroup);
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // find which radio button is selected
-                if(checkedId == R.id.radioButton) {
-                    Toast.makeText(getApplicationContext(), "",
-                            Toast.LENGTH_SHORT).show();
-                } else if(checkedId == R.id.radioButton2) {
-                    Toast.makeText(getApplicationContext(), "",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+       
 
         EditText username = (EditText) findViewById(R.id.uname1);
         EditText password = (EditText) findViewById(R.id.password1);
